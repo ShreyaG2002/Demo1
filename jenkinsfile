@@ -1,0 +1,16 @@
+ pipeline{
+    agent any
+    stages{
+        stage("checkout code"){
+            steps{
+                sh"git clone https://github.com/ShreyaG2002/Demo1.git"
+            }
+        }
+         stage("check the docker version"){
+            steps{
+                sh"docker version"
+            }
+        }
+        
+    }
+}
